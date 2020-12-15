@@ -3,7 +3,7 @@ import { Grid, Typography, Container, Link} from '@material-ui/core';
 import * as Constante from '../Constantes.js';
 import '../css/Escolha.css';
 
-export default function Escolha() {
+export default function Escolha({sistemaPersonalizado, sistemaSugestao, sistemaMarcadoEscolhido,sistemaEscolhido}) {
 
     const preventDefault = (event) => {
         event.preventDefault();
@@ -24,6 +24,8 @@ export default function Escolha() {
         
         if(marcador == 'sugestao') {
 
+            sistemaEscolhido(sistemaSugestao);
+
             marcadorSugestao.classList.remove('oculta');
             marcadorMonte.classList.add('oculta');
 
@@ -40,6 +42,8 @@ export default function Escolha() {
 
         
         if(marcador == 'monte') {
+
+            sistemaEscolhido(sistemaPersonalizado);
 
             marcadorMonte.classList.remove('oculta');
             marcadorSugestao.classList.add('oculta');
@@ -61,7 +65,6 @@ export default function Escolha() {
 
     return (
         <section id="escolha">
-
             <Container maxWidth="xl" className="cabecalho">
             
                 <Container maxWidth="lg" className="interno">

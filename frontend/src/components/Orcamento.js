@@ -9,13 +9,21 @@ import {Icon} from '@material-ui/core';
 import '../css/Orcamento.css';
 import * as Constante from '../Constantes.js';
 
-export default function Orcamento({sistemaPersonalizado, sistemaSugestao}) {
+export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistemaMarcadoEscolhido, sistemaEscolhido}) {
 
-    function bloqueiaRecarremento(event) { return event.preventDefault() };
+    function bloqueiaRecarremento(event) { 
+
+        return event.preventDefault() 
+    
+    };
 
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
+
+        // Antes de exibir o modal atualizo os valores paara o sistema escolhido
+        if(sistemaMarcadoEscolhido.sistema == 'Sistema Personalizado') { sistemaEscolhido(sistemaPersonalizado); } else { sistemaEscolhido(sistemaSugestao); }
+
         setOpen(true);
       };
   
@@ -496,23 +504,23 @@ function adicionaAgradecimento() {
                             </div>
 
                             <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute'}}>
-                                <img src={ sistemaPersonalizado.imagem_monitor } alt="Monitor" style={{maxWidth:"540px"}} />
+                                <img src={ sistemaMarcadoEscolhido.imagem_monitor } alt="Monitor" style={{maxWidth:"540px"}} />
                             </div>
 
                             <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute',top:'232px'}}>
-                                <img src={ sistemaPersonalizado.imagem_insuflador } alt="Insuflador" style={{maxWidth:"540px"}} />
+                                <img src={ sistemaMarcadoEscolhido.imagem_insuflador } alt="Insuflador" style={{maxWidth:"540px"}} />
                             </div>
 
                             <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute',top:'276px'}}>
-                                <img src={ sistemaPersonalizado.imagem_camera } alt="Camera" style={{maxWidth:"540px"}} />
+                                <img src={ sistemaMarcadoEscolhido.imagem_camera } alt="Camera" style={{maxWidth:"540px"}} />
                             </div>
 
                             <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute',top:'334px'}}>
-                                <img src={ sistemaPersonalizado.imagem_luz } alt="Luz" style={{maxWidth:"540px"}} />
+                                <img src={ sistemaMarcadoEscolhido.imagem_luz } alt="Luz" style={{maxWidth:"540px"}} />
                             </div>
 
                             <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute',top:'400px'}}>
-                                <img src={ sistemaPersonalizado.imagem_gravador } alt="Gravador" style={{maxWidth:"540px"}} />
+                                <img src={ sistemaMarcadoEscolhido.imagem_gravador } alt="Gravador" style={{maxWidth:"540px"}} />
                             </div>
                     </div>
             </Grid>
@@ -525,36 +533,36 @@ function adicionaAgradecimento() {
                         </div>
 
                         <div style={{maxWidth:'650px'}}>
-                            <Typography variant="h5" component="h5" className="titulo-sistema">{sistemaPersonalizado.sistema}</Typography>
+                            <Typography variant="h5" component="h5" className="titulo-sistema">{sistemaMarcadoEscolhido.sistema}</Typography>
                         </div>
 
                         <div style={{maxWidth:'650px'}}>
                             <Typography variant="body1" gutterBottom className="auxiliar monitor">Monitor de Grau Médico</Typography>                     
-                            <Typography variant="h5" component="h5" className="destaque">{sistemaPersonalizado.monitor}</Typography>
+                            <Typography variant="h5" component="h5" className="destaque">{sistemaMarcadoEscolhido.monitor}</Typography>
                         </div>
 
                         <div style={{maxWidth:'650px'}}>
                             <Typography variant="body1" gutterBottom className="auxiliar insuflador">Insuflador</Typography>
-                            <Typography variant="h5" component="h5" className="destaque">{sistemaPersonalizado.insuflador}</Typography>
+                            <Typography variant="h5" component="h5" className="destaque">{sistemaMarcadoEscolhido.insuflador}</Typography>
                         </div>
 
                         <div style={{maxWidth:'650px'}}>
                             <Typography variant="body1" gutterBottom className="auxiliar camera">Microcâmera</Typography>
-                            <Typography variant="h5" component="h5" className="destaque">{sistemaPersonalizado.camera}</Typography>
+                            <Typography variant="h5" component="h5" className="destaque">{sistemaMarcadoEscolhido.camera}</Typography>
                         </div>   
 
                         <div style={{maxWidth:'650px'}}>
                             <Typography variant="body1" gutterBottom className="auxiliar luz">Fonte de Luz</Typography>
-                            <Typography variant="h5" component="h5" className="destaque">{sistemaPersonalizado.luz}</Typography>
+                            <Typography variant="h5" component="h5" className="destaque">{sistemaMarcadoEscolhido.luz}</Typography>
                         </div>
 
                         <div style={{maxWidth:'650px'}}>
                             <Typography variant="body1" gutterBottom className="auxiliar gravador">Gravador</Typography>
-                            <Typography variant="h5" component="h5" className="destaque">{sistemaPersonalizado.gravador}</Typography>
+                            <Typography variant="h5" component="h5" className="destaque">{sistemaMarcadoEscolhido.gravador}</Typography>
                         </div>
 
                         <div style={{maxWidth:'650px'}}>
-                            <Typography variant="h5" component="h5" className="acessorios">{sistemaPersonalizado.armario} {sistemaPersonalizado.acessorios}</Typography>
+                            <Typography variant="h5" component="h5" className="acessorios">{sistemaMarcadoEscolhido.armario} {sistemaMarcadoEscolhido.acessorios}</Typography>
                         </div>
 
                         <div style={{maxWidth:'650px'}}>

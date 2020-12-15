@@ -643,7 +643,7 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
                                 value="artroscopia" 
                                 onChange={handleProcedimento}
                                 checked={procedimento.artroscopia} />
-                        <label className="form-check-label item-procedimento" htmlFor="urologia"> Artroscopia </label>
+                        <label className="form-check-label item-procedimento" htmlFor="artroscopia"> Artroscopia </label>
                     </div>
                   </div>
 

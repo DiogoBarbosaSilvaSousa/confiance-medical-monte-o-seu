@@ -46,6 +46,23 @@ function App() {
                                                imagem_monitor: imagem_inicial,
                                                sistema: 'Sistema Personalizado'});
 
+  const[marcadorSistema, setMarcadorSistema] = useState({acessorios:'',
+                                                        armario:'', 
+                                                        imagem_armario: imagem_inicial,
+                                                        gravador:'',
+                                                        imagem_gravador: imagem_inicial,
+                                                        camera:'',
+                                                        tipo_camera:'',
+                                                        imagem_camera: imagem_inicial,
+                                                        luz:'',
+                                                        imagem_luz: imagem_inicial,
+                                                        insuflador:'',
+                                                        imagem_insuflador: imagem_inicial,
+                                                        monitor:'',
+                                                        tipo_monitor:'',
+                                                        imagem_monitor: imagem_inicial,
+                                                        sistema: 'Sistema'});
+
   function coletarDadosSugestao(dados) {
     setSugestao({...dadosSugestao, ...dados});
   }
@@ -53,14 +70,18 @@ function App() {
   function coletarDadosPersonalizado(dados) {
     setPersonalizado({...dadosPersonalizado, ...dados});
   }
+
+  function sistemaMarcado(dados) {
+    setMarcadorSistema({...marcadorSistema,...dados});
+  }
   
     return (
       <>
         <Configuracao aoEnviarSugestao={coletarDadosSugestao} aoEnviarPersonalizado={coletarDadosPersonalizado} />
-        <Escolha />
+        <Escolha sistemaSugestao={dadosSugestao} sistemaPersonalizado={dadosPersonalizado} sistemaMarcadoEscolhido={marcadorSistema} sistemaEscolhido={sistemaMarcado} />
         <Sugestao sistemaSugestao={dadosSugestao} aoEnviarSugestao={coletarDadosSugestao} />
         <Monte sistemaPersonalizado={dadosPersonalizado} aoEnviarPersonalizado={coletarDadosPersonalizado} />
-        <Orcamento sistemaSugestao={dadosSugestao} sistemaPersonalizado={dadosPersonalizado} />
+        <Orcamento sistemaSugestao={dadosSugestao} sistemaPersonalizado={dadosPersonalizado} sistemaMarcadoEscolhido={marcadorSistema} sistemaEscolhido={sistemaMarcado} />
       </>
     );
 }
