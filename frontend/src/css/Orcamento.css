@@ -1,0 +1,213 @@
+#orcamento {
+    background-color: #00c5d4;
+    padding: 0 0 3rem 0;
+}
+
+#orcamento .oculta {
+    display: none;
+}
+
+#orcamento .marcador {
+    text-align: center;
+    padding: 0 0 3rem ;
+}
+
+#orcamento .formulario {
+    max-width: 1115px;
+    margin: 0 auto;
+    padding: 1rem 0 0 0.75rem;
+}
+
+#orcamento .formulario .compra {
+    margin-top: 0.4rem;
+    width: 18px;
+    height: 18px;
+}
+
+#orcamento .formulario .locacao {
+    margin-top: 0.4rem;
+    width: 18px;
+    height: 18px;
+}
+
+#orcamento .formulario label {
+    color: #1c2c4e;
+}
+
+#orcamento .formulario .form-check-label {
+    margin-left: 0.5rem;
+    color: #1c2c4e;
+    font-family: "Lato", sans-serif;
+}
+
+#orcamento .formulario .form-check-input {
+    width: 18px;
+    height: 18px;
+}
+
+#orcamento .etapas {
+    text-align: center;
+}
+
+#orcamento .etapa-instituicao {
+     padding: 0 0 0 0;
+}
+
+#orcamento .etapa-localizacao {
+    padding: 0 0 0 0;
+}
+
+#orcamento .etapa-interesse {
+    padding: 0 0 0 0;
+}
+
+#orcamento .etapa-contato {
+    padding: 0 0 0 0;
+}
+
+#orcamento .titulo {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.25rem;
+    padding: 1rem 0 1rem 0;
+    color: #1c2c4e;
+}
+
+#orcamento .espacamento {
+    padding: 0 1rem 0 1rem;
+}
+
+#orcamento .etapa-instituicao .linha-lateral {
+    border-right: 2px solid #ffffff3b;
+}
+
+#orcamento .etapa-localizacao .linha-lateral {
+    border-right: 2px solid #ffffff3b;
+    max-height: 302px;
+    height: 100%;
+}
+
+#orcamento .etapa-interesse .linha-lateral {
+    border-right: 2px solid #ffffff3b;
+    padding: 0 1rem 0 1rem;
+    max-height: 464px;
+    height: 100%;
+}
+
+#orcamento .btnVoltarInteresse {
+    background-color: #326c87;
+    margin: 0 1rem 0 0;
+}
+
+.orcamento.sistema .titulo-agradecimento {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1c2c4e;
+}
+
+.orcamento.sistema .texto .titulo-sistema {
+    color: #f69747;
+    padding: 1rem 0 1rem 0;
+    font-weight: bold;
+    text-transform: uppercase;
+} 
+
+.orcamento.sistema .texto .destaque {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1c2c4e;
+}
+
+.orcamento.sistema .texto .destaque.consultor {
+    padding: 1rem 0 1rem 0;
+}
+
+.orcamento.sistema .texto .linha-destaque {
+    border-bottom: 2.5px solid #f69747;
+}
+
+.orcamento.sistema .texto .ajuda {
+
+    color: #326c87;
+    margin: 0 0 0 0;
+    padding: 1rem 0 1rem 0;
+
+}
+
+.orcamento.sistema .texto .auxiliar {
+
+    color: #326c87;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: "Lato", sans-serif;
+
+}
+.orcamento.sistema .texto .auxiliar .icone {
+   color: #f69747;
+   font-size: 1.25rem;
+}
+
+.orcamento.sistema .texto .auxiliar .texto {
+    padding: 0 0 0 1rem;
+    font-size: 1.25rem;
+}
+
+.orcamento.sistema .texto .monitor {
+    padding: 0 0 0 0;
+}
+
+.orcamento.sistema .texto .insuflador {
+    padding: 0 0 0 0;
+}
+
+.orcamento.sistema .texto .camera {
+    padding: 0 0 0 0;
+}
+
+.orcamento.sistema .texto .luz {
+    padding: 0 0 0 0;
+}
+
+.orcamento.sistema .texto .gravador {
+    padding: 0 0 0 0;
+}
+
+.orcamento.sistema .texto .acessorios {
+
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 0 1rem 0;
+    text-transform: uppercase;
+    color: #1c2c4e;
+
+}
+
+.orcamento-icone-fechar {
+    color: #f00;
+    font-size: 2.5rem !important;
+    margin: 1rem 1rem 0 0;
+}
+
+
+@media (min-width: 575.98px) { 
+
+
+}
+
+@media (max-width: 575.98px) { 
+
+    #orcamento .titulo {
+
+        font-size: 2rem;
+        padding: 1rem 0 1rem 0;
+
+    }
+
+    #orcamento .oculta_etapa {
+        display: none;
+    }
+
+}
