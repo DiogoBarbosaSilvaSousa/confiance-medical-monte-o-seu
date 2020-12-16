@@ -1130,6 +1130,10 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
       let destaque = document.querySelector("." + id_acessorio);
       destaque.classList.toggle('monte-destaque');
 
+       // destacar opção selecionada (circulo)
+       let destaqueCirculo = document.querySelector("." + id_acessorio + "-circulo");
+       destaqueCirculo.classList.toggle('monte-destaque-circulo');
+
       // informações da opção selecionada
       let opcao_acessorio = document.querySelector("#" + id_acessorio);
       
@@ -1246,12 +1250,14 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
 
           const acessoriosPersonalizados = sistemaPersonalizado.acessorios.split(' + ');
           let monte_destaque_acessorio = ''; 
+          let monte_destaque_acessorio_circulo = ''
 
           acessoriosPersonalizados.find(function(itemAtual,indexAtual){
             
             // Destaco se existir dentro da lista atual
             if(acessorios.texto_opcao == itemAtual) {
               monte_destaque_acessorio = 'monte-destaque';
+              monte_destaque_acessorio_circulo = 'monte-destaque-circulo';
             }
 
           });
@@ -1260,7 +1266,13 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
                       <Link href="#" onClick={incluirAcessorio} id={"acessorio-opcao-" + index} data-opcao={"acessorio-opcao-" + index} data-acessorios={acessorios.texto_opcao} data-imagem={acessorios.imagem} className="link-opcao acessorio"> 
                         <div className="opcao-posicao">
                            <div className="opcao-imagem">
-                             <img data-opcao={"acessorio-opcao-" + index} src={acessorios.imagem_opcao} alt={acessorios.modelo} className="opcao-acessorios" />
+
+                            <img data-opcao={"acessorio-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                  className={"opcao-acessorio-circulo acessorio-opcao-" + index + "-circulo " + monte_destaque_acessorio_circulo} 
+                                  style={{width:'75%', opacity:'0'}} />
+
+                             <img data-opcao={"acessorio-opcao-" + index} src={acessorios.imagem_opcao} alt={acessorios.modelo} className="opcao-acessorios" 
+                             style={{marginTop: '-314px', marginBottom: '0'}} />
                            </div>
                            <div className={"opcao-texto acessorio-opcao-" + index + " " + monte_destaque_acessorio}>
                              <Typography data-opcao={"acessorio-opcao-" + index} variant="h6" component="h6" className="subtitulo">{acessorios.texto_opcao}</Typography>
