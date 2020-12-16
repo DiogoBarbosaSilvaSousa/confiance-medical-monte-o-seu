@@ -82,6 +82,10 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
         const imagemEtapa = document.querySelector('.etapa-imagem');
         imagemEtapa.src = imgUrl;
 
+        const imgUrlMobile = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}-mobile.png`;         
+        const imagemEtapaMobile = document.querySelector('.etapa-imagem-mobile');    
+        imagemEtapaMobile.src = imgUrlMobile;
+
         let estado = document.getElementById('estadoSelect');
         estado.removeAttribute('disabled');
 
@@ -112,6 +116,10 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
         const imgUrl = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}.png`;         
         const imagemEtapa = document.querySelector('.etapa-imagem');    
         imagemEtapa.src = imgUrl;
+
+        const imgUrlMobile = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}-mobile.png`;         
+        const imagemEtapaMobile = document.querySelector('.etapa-imagem-mobile');    
+        imagemEtapaMobile.src = imgUrlMobile;
 
 
         let compra = document.getElementById('compra');
@@ -144,6 +152,10 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
         const imgUrl = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}.png`;        
         const imagemEtapa = document.querySelector('.etapa-imagem');    
         imagemEtapa.src = imgUrl;
+
+        const imgUrlMobile = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}-mobile.png`;         
+        const imagemEtapaMobile = document.querySelector('.etapa-imagem-mobile');    
+        imagemEtapaMobile.src = imgUrlMobile;
 
         let nome = document.getElementById('nome');
         nome.removeAttribute('disabled');
@@ -189,6 +201,10 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
         const imagemEtapa = document.querySelector('.etapa-imagem');    
         imagemEtapa.src = imgUrl;
 
+        const imgUrlMobile = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}-mobile.png`;         
+        const imagemEtapaMobile = document.querySelector('.etapa-imagem-mobile');    
+        imagemEtapaMobile.src = imgUrlMobile;
+
         let btnEtapaDois = document.querySelector('.etapaDois');
         btnEtapaDois.classList.remove('oculta');
 
@@ -213,6 +229,10 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
         const imagemEtapa = document.querySelector('.etapa-imagem');    
         imagemEtapa.src = imgUrl;
 
+        const imgUrlMobile = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}-mobile.png`;         
+        const imagemEtapaMobile = document.querySelector('.etapa-imagem-mobile');    
+        imagemEtapaMobile.src = imgUrlMobile;
+
         let btnEtapaTres = document.querySelector('.etapaTres');
         btnEtapaTres.classList.remove('oculta');
 
@@ -236,6 +256,10 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
         const imgUrl = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}.png`;         
         const imagemEtapa = document.querySelector('.etapa-imagem');    
         imagemEtapa.src = imgUrl;
+
+        const imgUrlMobile = `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-${numetapa}-mobile.png`;         
+        const imagemEtapaMobile = document.querySelector('.etapa-imagem-mobile');    
+        imagemEtapaMobile.src = imgUrlMobile;
 
         let btnEtapaQuatro = document.querySelector('.etapaQuatro');
         btnEtapaQuatro.classList.remove('oculta');
@@ -263,15 +287,18 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
             </Container>
 
             <Container maxWidth="lg">
-
-
                 <Typography variant="h4" component="h4" className="titulo">Orçamento para este sistema</Typography>
+            </Container>
 
-                <Grid container spacing={0}>
-                        <Grid item xs={12} className="etapas">
-                                <img src={ `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-1.png` } alt="Etapas" className="etapa-imagem" />
-                        </Grid>
-                </Grid>
+            <Container maxWidth="lg" className="text-center d-none d-sm-block">              
+                <img src={ `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-1.png` } alt="Etapas" className="etapa-imagem" />
+            </Container>
+
+            <Container maxWidth="lg" className="text-center p-0 d-block d-sm-none">
+                <img src={ `${Constante.BASE_URL_CONF_REACT}/wp-content/plugins/confiance-medical-monte-o-seu/public/images/etapas/etapa-1-mobile.png` } alt="Etapas" className="etapa-imagem-mobile" />
+            </Container>
+
+            <Container maxWidth="lg">
 
                 <Grid container spacing={0} className="formulario">
                     <Grid item xs={12} md={3} className="etapa-instituicao">
