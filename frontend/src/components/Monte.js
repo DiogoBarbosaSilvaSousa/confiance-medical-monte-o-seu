@@ -58,11 +58,21 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
       let limpar = document.querySelectorAll('.monitor .opcao-texto');
       limpar.forEach( (el) => {
           return el.classList.remove('monte-destaque');
-      });  
+      });
+
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.monitor .opcao-monitor-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('monte-destaque-circulo');
+      });
 
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_monitor);
       destaque.classList.toggle('monte-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_monitor + "-circulo");
+      destaqueCirculo.classList.toggle('monte-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_monitor = document.querySelector("#" + id_monitor);
@@ -157,10 +167,12 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
 
           const monitorPersonalizado = sistemaPersonalizado.monitor; // Opção armazenada até o momento
           let monte_destaque_monitor = ''; 
+          let monte_destaque_monitor_circulo = ''; 
 
           // Destaco se existir dentro da lista atual
           if(monitor.texto_opcao == monitorPersonalizado) {
             monte_destaque_monitor = 'monte-destaque';
+            monte_destaque_monitor_circulo = 'monte-destaque-circulo';
           }
 
 
@@ -168,7 +180,12 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
                       <Link href="#" onClick={incluirMonitor} id={"monitor-opcao-" + index} data-opcao={"monitor-opcao-" + index} data-monitor={monitor.texto_opcao} data-imagem={monitor.imagem} data-tipo={monitor.tipo} className="link-opcao monitor"> 
                         <div className="opcao-posicao">
                             <div className="opcao-imagem">
-                              <img data-opcao={"monitor-opcao-" + index} src={monitor.imagem_opcao} alt={monitor.modelo} className="opcao-monitores" />
+                              <img data-opcao={"monitor-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                              className={"opcao-monitor-circulo monitor-opcao-" + index + "-circulo " + monte_destaque_monitor_circulo} 
+                              style={{width:'90%', opacity:'0'}} />
+                              <br />
+                              <img data-opcao={"monitor-opcao-" + index} src={monitor.imagem_opcao} alt={monitor.modelo} className="opcao-monitores" 
+                              style={{marginTop: '-250px', marginBottom: '62px'}} />
                             </div>
                             <div className={"opcao-texto monitor-opcao-" + index + " " + monte_destaque_monitor}>
                               <Typography data-opcao={"monitor-opcao-" + index} variant="h6" component="h6" className="subtitulo">{monitor.texto_opcao}</Typography>
