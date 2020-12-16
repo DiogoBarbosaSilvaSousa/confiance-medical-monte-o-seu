@@ -1356,7 +1356,7 @@ function sistemaMontado() {
             </div>
 
             <div className="texto-auxiliar-posicao-2">
-                  <Typography variant="body1" gutterBottom className="ajuda">Adicione ou clique nos equipamentos para personalizar seu sistema.</Typography>
+                  <Typography variant="body1" gutterBottom className="ajuda">Clique nos equipamentos para personalizar seu sistema.</Typography>
             </div>
 
             {sistemaSugestao.monitor != '' &&
