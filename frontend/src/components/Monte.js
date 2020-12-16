@@ -779,9 +779,19 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
           return el.classList.remove('monte-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.gravador .opcao-gravador-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('monte-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_gravador);
       destaque.classList.toggle('monte-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_gravador + "-circulo");
+      destaqueCirculo.classList.toggle('monte-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_gravador = document.querySelector("#" + id_gravador);
@@ -874,17 +884,27 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
 
           const gravadorPersonalizado = sistemaPersonalizado.gravador; // Opção armazenada até o momento
           let monte_destaque_gravador = ''; 
+          let monte_destaque_gravador_circulo = '';
 
           // Destaco se existir dentro da lista atual
           if(gravador.texto_opcao == gravadorPersonalizado) {
             monte_destaque_gravador = 'monte-destaque';
+            monte_destaque_gravador_circulo = 'monte-destaque-circulo';
           }
 
           return (<Grid item xs={12} sm={4} md={3} className="opcao-item" key={index}>
                       <Link href="#" onClick={incluirGravador} id={"gravador-opcao-" + index} data-opcao={"gravador-opcao-" + index} data-gravador={gravador.texto_opcao} data-imagem={gravador.imagem}  className="link-opcao gravador"> 
                            <div className="opcao-posicao">
                               <div className="opcao-imagem">
-                               <img data-opcao={"gravador-opcao-" + index} src={gravador.imagem_opcao} alt={gravador.modelo} className="opcao-gravadores" />
+
+                               <img data-opcao={"gravador-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                  className={"opcao-gravador-circulo gravador-opcao-" + index + "-circulo " + monte_destaque_gravador_circulo} 
+                                  style={{width:'90%', opacity:'0'}} />
+                                  
+                               <br />
+
+                               <img data-opcao={"gravador-opcao-" + index} src={gravador.imagem_opcao} alt={gravador.modelo} className="opcao-gravadores" 
+                               style={{marginTop: '-210px', marginBottom: '30px'}} />
                            </div>
                            <div className={"opcao-texto gravador-opcao-" + index + " " + monte_destaque_gravador}>
                              <Typography data-opcao={"gravador-opcao-" + index} variant="h6" component="h6" className="subtitulo">{gravador.texto_opcao}</Typography>
@@ -935,9 +955,19 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
           return el.classList.remove('monte-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.armario .opcao-armario-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('monte-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_armario);
       destaque.classList.toggle('monte-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_armario + "-circulo");
+      destaqueCirculo.classList.toggle('monte-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_armario = document.querySelector("#" + id_armario);      
@@ -1031,17 +1061,28 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
 
           const armarioPersonalizado = sistemaPersonalizado.armario; // Opção armazenada até o momento
           let monte_destaque_armario = ''; 
+          let monte_destaque_armario_circulo = '';
 
           // Destaco se existir dentro da lista atual
           if(armario.texto_opcao == armarioPersonalizado) {
             monte_destaque_armario = 'monte-destaque';
+            monte_destaque_armario_circulo = 'monte-destaque-circulo'
           }
 
           return (<Grid item xs={12} sm={4} md={3} className="opcao-item" key={index}>
                       <Link href="#" onClick={incluirArmario} id={"armario-opcao-" + index} data-opcao={"armario-opcao-" + index} data-armario={armario.texto_opcao} data-imagem={armario.imagem} className="link-opcao armario"> 
                         <div className="opcao-posicao">
                             <div className="opcao-imagem">
-                              <img data-opcao={"armario-opcao-" + index} src={armario.imagem_opcao} alt={armario.modelo} className="opcao-armarios" />
+
+                               <img data-opcao={"armario-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                  className={"opcao-armario-circulo armario-opcao-" + index + "-circulo " + monte_destaque_armario_circulo} 
+                                  style={{width:'90%', opacity:'0'}} />
+                                  
+                               <br />
+
+                              <img data-opcao={"armario-opcao-" + index} src={armario.imagem_opcao} alt={armario.modelo} className="opcao-armarios" 
+                              style={{marginTop: '-314px', marginBottom: '0'}} />
+
                             </div>
                             <div className={"opcao-texto armario-opcao-" + index + " " + monte_destaque_armario }>
                               <Typography data-opcao={"armario-opcao-" + index} variant="h6" component="h6" className="subtitulo">{armario.texto_opcao}</Typography>
