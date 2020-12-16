@@ -237,9 +237,19 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
           return el.classList.remove('monte-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.insuflador .opcao-insuflador-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('monte-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_insuflador);
       destaque.classList.toggle('monte-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_insuflador + "-circulo");
+      destaqueCirculo.classList.toggle('monte-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_insuflador = document.querySelector("#" + id_insuflador);      
@@ -334,18 +344,28 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
         addInsufladores.map((insuflador,index) => {
 
           const insufladorPersonalizado = sistemaPersonalizado.insuflador; // Opção armazenada até o momento
-          let monte_destaque_insuflador = ''; 
+          let monte_destaque_insuflador = '';
+          let monte_destaque_insuflador_circulo = ''; 
+ 
 
           // Destaco se existir dentro da lista atual
           if(insuflador.texto_opcao == insufladorPersonalizado) {
             monte_destaque_insuflador = 'monte-destaque';
+            monte_destaque_insuflador_circulo = 'monte-destaque-circulo';
           }
 
           return (<Grid item xs={12} sm={4} md={3} className="opcao-item" key={index}>
                       <Link href="#" onClick={incluirInsuflador} id={"insuflador-opcao-" + index} data-opcao={"insuflador-opcao-" + index} data-insuflador={insuflador.texto_opcao} data-imagem={insuflador.imagem} className="link-opcao insuflador">
                        <div className="opcao-posicao">
                             <div className="opcao-imagem">
-                               <img data-opcao={"insuflador-opcao-" + index} src={insuflador.imagem_opcao} alt={insuflador.modelo} className="opcao-insufladores" />
+
+                              <img data-opcao={"insuflador-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                              className={"opcao-insuflador-circulo insuflador-opcao-" + index + "-circulo " + monte_destaque_insuflador_circulo} 
+                              style={{width:'90%', opacity:'0'}} />
+
+                              <br />
+                               <img data-opcao={"insuflador-opcao-" + index} src={insuflador.imagem_opcao} alt={insuflador.modelo} className="opcao-insufladores"
+                                style={{marginTop: '-200px', marginBottom: '16px'}} />
                            </div>
                            <div className={ "opcao-texto insuflador-opcao-" + index + " " + monte_destaque_insuflador}>
                                 <Typography data-opcao={"insuflador-opcao-" + index}  variant="h6" component="h6" className="subtitulo">{insuflador.texto_opcao}</Typography>
@@ -397,9 +417,19 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
           return el.classList.remove('monte-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.camera .opcao-camera-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('monte-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_camera);
       destaque.classList.toggle('monte-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_camera + "-circulo");
+      destaqueCirculo.classList.toggle('monte-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_camera = document.querySelector("#" + id_camera);
@@ -496,10 +526,12 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
 
           const cameraPersonalizado = sistemaPersonalizado.camera; // Opção armazenada até o momento
           let monte_destaque_camera = ''; 
+          let monte_destaque_camera_circulo = ''; 
 
           // Destaco se existir dentro da lista atual
           if(camera.texto_opcao == cameraPersonalizado) {
             monte_destaque_camera = 'monte-destaque';
+            monte_destaque_camera_circulo = 'monte-destaque-circulo'; 
           }
 
           const monitorPersonalizadoTipo = sistemaPersonalizado.tipo_monitor;
@@ -515,7 +547,14 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
                       <Link href="#" onClick={ (opacidade_camera == 1) ? incluirCamera : preventDefault} id={"camera-opcao-" + index} data-opcao={"camera-opcao-" + index} data-camera={camera.texto_opcao} data-imagem={camera.imagem} data-tipo={camera.tipo} className="link-opcao camera">
                          <div className="opcao-posicao" style={{opacity: opacidade_camera}}>
                               <div className="opcao-imagem">
-                                <img data-opcao={"camera-opcao-" + index} src={camera.imagem_opcao} alt={camera.modelo} className="opcao-cameras" />
+
+                                <img data-opcao={"camera-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                className={"opcao-camera-circulo camera-opcao-" + index + "-circulo " + monte_destaque_camera_circulo} 
+                                style={{width:'90%', opacity:'0'}} />
+                                
+                                <br />
+                                <img data-opcao={"camera-opcao-" + index} src={camera.imagem_opcao} alt={camera.modelo} className="opcao-cameras" 
+                                style={{marginTop: '-210px', marginBottom: '30px'}} />
                               </div>
                               <div className={"opcao-texto camera-opcao-" + index + " " + monte_destaque_camera}>
                                 <Typography data-opcao={"camera-opcao-" + index} variant="h6" component="h6" className="subtitulo">{camera.texto_opcao}</Typography>
