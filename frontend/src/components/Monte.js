@@ -607,9 +607,19 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
           return el.classList.remove('monte-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.luz .opcao-luz-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('monte-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_luz);
       destaque.classList.toggle('monte-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_luz + "-circulo");
+      destaqueCirculo.classList.toggle('monte-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_luz = document.querySelector("#" + id_luz);
@@ -700,17 +710,26 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
 
           const luzPersonalizado = sistemaPersonalizado.luz; // Opção armazenada até o momento
           let monte_destaque_luz = ''; 
+          let monte_destaque_luz_circulo = '';
 
           // Destaco se existir dentro da lista atual
           if(luz.texto_opcao == luzPersonalizado) {
             monte_destaque_luz = 'monte-destaque';
+            monte_destaque_luz_circulo = 'monte-destaque-circulo';
           }
 
           return (<Grid item xs={12} sm={4} md={3} className="opcao-item" key={index}>
                       <Link href="#" onClick={incluirLuz} id={"luz-opcao-" + index} data-opcao={"luz-opcao-" + index} data-luz={luz.texto_opcao} data-imagem={luz.imagem} className="link-opcao luz">
                         <div className="opcao-posicao">
                               <div className="opcao-imagem">
-                                  <img data-opcao={"luz-opcao-" + index} src={luz.imagem_opcao} alt={luz.modelo} className="opcao-luzes opcao-imagem" />
+
+                                <img data-opcao={"luz-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                  className={"opcao-luz-circulo luz-opcao-" + index + "-circulo " + monte_destaque_luz_circulo} 
+                                  style={{width:'90%', opacity:'0'}} />
+                                  
+                                  <br />
+                                  <img data-opcao={"luz-opcao-" + index} src={luz.imagem_opcao} alt={luz.modelo} className="opcao-luzes opcao-imagem" 
+                                   style={{marginTop: '-210px', marginBottom: '30px'}} />
                               </div>
                               <div className={"opcao-texto luz-opcao-" + index + " " + monte_destaque_luz}>
                                 <Typography data-opcao={"luz-opcao-" + index} variant="h6" component="h6" className="subtitulo">{luz.texto_opcao}</Typography>
