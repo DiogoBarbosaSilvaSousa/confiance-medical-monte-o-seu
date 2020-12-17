@@ -354,6 +354,10 @@ a.link-opcao {
     color: #fff;
 }
 
+.sugestao-destaque-circulo {
+    opacity: 1 !important;
+}
+
 .sugestao-destaque .subtitulo {
     color: #fff !important;
 }

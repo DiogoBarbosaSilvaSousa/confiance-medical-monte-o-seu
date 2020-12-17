@@ -180,12 +180,16 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
                       <Link href="#" onClick={incluirMonitor} id={"monitor-opcao-" + index} data-opcao={"monitor-opcao-" + index} data-monitor={monitor.texto_opcao} data-imagem={monitor.imagem} data-tipo={monitor.tipo} className="link-opcao monitor"> 
                         <div className="opcao-posicao">
                             <div className="opcao-imagem">
+
                               <img data-opcao={"monitor-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
                               className={"opcao-monitor-circulo monitor-opcao-" + index + "-circulo " + monte_destaque_monitor_circulo} 
                               style={{width:'90%', opacity:'0'}} />
+
                               <br />
+
                               <img data-opcao={"monitor-opcao-" + index} src={monitor.imagem_opcao} alt={monitor.modelo} className="opcao-monitores" 
                               style={{marginTop: '-250px', marginBottom: '62px'}} />
+
                             </div>
                             <div className={"opcao-texto monitor-opcao-" + index + " " + monte_destaque_monitor}>
                               <Typography data-opcao={"monitor-opcao-" + index} variant="h6" component="h6" className="subtitulo">{monitor.texto_opcao}</Typography>
@@ -364,8 +368,10 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
                               style={{width:'90%', opacity:'0'}} />
 
                               <br />
-                               <img data-opcao={"insuflador-opcao-" + index} src={insuflador.imagem_opcao} alt={insuflador.modelo} className="opcao-insufladores"
+
+                              <img data-opcao={"insuflador-opcao-" + index} src={insuflador.imagem_opcao} alt={insuflador.modelo} className="opcao-insufladores"
                                 style={{marginTop: '-200px', marginBottom: '16px'}} />
+
                            </div>
                            <div className={ "opcao-texto insuflador-opcao-" + index + " " + monte_destaque_insuflador}>
                                 <Typography data-opcao={"insuflador-opcao-" + index}  variant="h6" component="h6" className="subtitulo">{insuflador.texto_opcao}</Typography>
@@ -553,8 +559,10 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
                                 style={{width:'90%', opacity:'0'}} />
                                 
                                 <br />
+
                                 <img data-opcao={"camera-opcao-" + index} src={camera.imagem_opcao} alt={camera.modelo} className="opcao-cameras" 
                                 style={{marginTop: '-210px', marginBottom: '30px'}} />
+
                               </div>
                               <div className={"opcao-texto camera-opcao-" + index + " " + monte_destaque_camera}>
                                 <Typography data-opcao={"camera-opcao-" + index} variant="h6" component="h6" className="subtitulo">{camera.texto_opcao}</Typography>
@@ -728,8 +736,10 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
                                   style={{width:'90%', opacity:'0'}} />
                                   
                                   <br />
+
                                   <img data-opcao={"luz-opcao-" + index} src={luz.imagem_opcao} alt={luz.modelo} className="opcao-luzes opcao-imagem" 
                                    style={{marginTop: '-210px', marginBottom: '30px'}} />
+
                               </div>
                               <div className={"opcao-texto luz-opcao-" + index + " " + monte_destaque_luz}>
                                 <Typography data-opcao={"luz-opcao-" + index} variant="h6" component="h6" className="subtitulo">{luz.texto_opcao}</Typography>
@@ -1250,7 +1260,7 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
 
           const acessoriosPersonalizados = sistemaPersonalizado.acessorios.split(' + ');
           let monte_destaque_acessorio = ''; 
-          let monte_destaque_acessorio_circulo = ''
+          let monte_destaque_acessorio_circulo = '';
 
           acessoriosPersonalizados.find(function(itemAtual,indexAtual){
             
@@ -1269,7 +1279,9 @@ export default function Monte({sistemaPersonalizado, aoEnviarPersonalizado}) {
 
                             <img data-opcao={"acessorio-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
                                   className={"opcao-acessorio-circulo acessorio-opcao-" + index + "-circulo " + monte_destaque_acessorio_circulo} 
-                                  style={{width:'75%', opacity:'0'}} />
+                                  style={{width:'100%', opacity:'0'}} />
+
+                              <br />
 
                              <img data-opcao={"acessorio-opcao-" + index} src={acessorios.imagem_opcao} alt={acessorios.modelo} className="opcao-acessorios" 
                              style={{marginTop: '-314px', marginBottom: '0'}} />

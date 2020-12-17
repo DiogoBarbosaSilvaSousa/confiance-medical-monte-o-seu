@@ -60,9 +60,19 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
           return el.classList.remove('sugestao-destaque');
       });  
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.monitor .opcao-monitor-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('sugestao-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_monitor);
       destaque.classList.toggle('sugestao-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_monitor + "-circulo");
+      destaqueCirculo.classList.toggle('sugestao-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_monitor = document.querySelector("#" + id_monitor);
@@ -157,10 +167,13 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
 
           const monitorPersonalizado = sistemaSugestao.monitor; // Opção armazenada até o momento
           let sugestao_destaque_monitor = ''; 
+          let sugestao_destaque_monitor_circulo = ''; 
+
 
           // Destaco se existir dentro da lista atual
           if(monitor.texto_opcao == monitorPersonalizado) {
             sugestao_destaque_monitor = 'sugestao-destaque';
+            sugestao_destaque_monitor_circulo = 'sugestao-destaque-circulo';
           }
 
 
@@ -168,7 +181,16 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
                       <Link href="#" onClick={incluirMonitor} id={"monitor-opcao-" + index} data-opcao={"monitor-opcao-" + index} data-monitor={monitor.texto_opcao} data-imagem={monitor.imagem} data-tipo={monitor.tipo} className="link-opcao monitor"> 
                         <div className="opcao-posicao">
                             <div className="opcao-imagem">
-                              <img data-opcao={"monitor-opcao-" + index} src={monitor.imagem_opcao} alt={monitor.modelo} className="opcao-monitores" />
+
+                              <img data-opcao={"monitor-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                className={"opcao-monitor-circulo monitor-opcao-" + index + "-circulo " + sugestao_destaque_monitor_circulo} 
+                                style={{width:'90%', opacity:'0'}} />
+                              
+                              <br />
+
+                              <img data-opcao={"monitor-opcao-" + index} src={monitor.imagem_opcao} alt={monitor.modelo} className="opcao-monitores" 
+                              style={{marginTop: '-250px', marginBottom: '62px'}} />
+
                             </div>
                             <div className={"opcao-texto monitor-opcao-" + index + " " + sugestao_destaque_monitor}>
                               <Typography data-opcao={"monitor-opcao-" + index} variant="h6" component="h6" className="subtitulo">{monitor.texto_opcao}</Typography>
@@ -220,9 +242,19 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
           return el.classList.remove('sugestao-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.insuflador .opcao-insuflador-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('sugestao-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_insuflador);
       destaque.classList.toggle('sugestao-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_insuflador + "-circulo");
+      destaqueCirculo.classList.toggle('sugestao-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_insuflador = document.querySelector("#" + id_insuflador);      
@@ -318,17 +350,28 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
 
           const insufladorPersonalizado = sistemaSugestao.insuflador; // Opção armazenada até o momento
           let sugestao_destaque_insuflador = ''; 
+          let sugestao_destaque_insuflador_circulo = ''; 
 
           // Destaco se existir dentro da lista atual
           if(insuflador.texto_opcao == insufladorPersonalizado) {
             sugestao_destaque_insuflador = 'sugestao-destaque';
+            sugestao_destaque_insuflador_circulo = 'sugestao-destaque-circulo';
           }
 
           return (<Grid item xs={12} sm={4} md={3} className="opcao-item" key={index}>
                       <Link href="#" onClick={incluirInsuflador} id={"insuflador-opcao-" + index} data-opcao={"insuflador-opcao-" + index} data-insuflador={insuflador.texto_opcao} data-imagem={insuflador.imagem} className="link-opcao insuflador">
                        <div className="opcao-posicao">
                             <div className="opcao-imagem">
-                               <img data-opcao={"insuflador-opcao-" + index} src={insuflador.imagem_opcao} alt={insuflador.modelo} className="opcao-insufladores" />
+
+                              <img data-opcao={"insuflador-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                              className={"opcao-insuflador-circulo insuflador-opcao-" + index + "-circulo " + sugestao_destaque_insuflador_circulo} 
+                              style={{width:'90%', opacity:'0'}} />
+
+                              <br />
+                             
+                              <img data-opcao={"insuflador-opcao-" + index} src={insuflador.imagem_opcao} alt={insuflador.modelo} className="opcao-insufladores" 
+                              style={{marginTop: '-200px', marginBottom: '16px'}} />
+
                            </div>
                            <div className={ "opcao-texto insuflador-opcao-" + index + " " + sugestao_destaque_insuflador}>
                                 <Typography data-opcao={"insuflador-opcao-" + index}  variant="h6" component="h6" className="subtitulo">{insuflador.texto_opcao}</Typography>
@@ -380,9 +423,19 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
           return el.classList.remove('sugestao-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.camera .opcao-camera-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('sugestao-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_camera);
       destaque.classList.toggle('sugestao-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_camera + "-circulo");
+      destaqueCirculo.classList.toggle('sugestao-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_camera = document.querySelector("#" + id_camera);
@@ -479,10 +532,12 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
 
           const cameraPersonalizado = sistemaSugestao.camera; // Opção armazenada até o momento
           let sugestao_destaque_camera = ''; 
+          let sugestao_destaque_camera_circulo = ''; 
 
           // Destaco se existir dentro da lista atual
           if(camera.texto_opcao == cameraPersonalizado) {
             sugestao_destaque_camera = 'sugestao-destaque';
+            sugestao_destaque_camera_circulo = 'sugestao-destaque-circulo'; 
           }
 
           const monitorPersonalizadoTipo = sistemaSugestao.tipo_monitor;
@@ -498,7 +553,16 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
                       <Link href="#" onClick={ (opacidade_camera == 1) ? incluirCamera : preventDefault} id={"camera-opcao-" + index} data-opcao={"camera-opcao-" + index} data-camera={camera.texto_opcao} data-imagem={camera.imagem} data-tipo={camera.tipo} className="link-opcao camera">
                          <div className="opcao-posicao" style={{opacity: opacidade_camera}}>
                               <div className="opcao-imagem">
-                                <img data-opcao={"camera-opcao-" + index} src={camera.imagem_opcao} alt={camera.modelo} className="opcao-cameras" />
+
+                               <img data-opcao={"camera-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                className={"opcao-camera-circulo camera-opcao-" + index + "-circulo " + sugestao_destaque_camera_circulo} 
+                                style={{width:'90%', opacity:'0'}} />
+                                
+                                <br />
+
+                                <img data-opcao={"camera-opcao-" + index} src={camera.imagem_opcao} alt={camera.modelo} className="opcao-cameras" 
+                                style={{marginTop: '-210px', marginBottom: '30px'}} />
+
                               </div>
                               <div className={"opcao-texto camera-opcao-" + index + " " + sugestao_destaque_camera}>
                                 <Typography data-opcao={"camera-opcao-" + index} variant="h6" component="h6" className="subtitulo">{camera.texto_opcao}</Typography>
@@ -551,9 +615,19 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
           return el.classList.remove('sugestao-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.luz .opcao-luz-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('sugestao-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_luz);
       destaque.classList.toggle('sugestao-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_luz + "-circulo");
+      destaqueCirculo.classList.toggle('sugestao-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_luz = document.querySelector("#" + id_luz);
@@ -643,18 +717,28 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
         addLuzes.map((luz,index) => {
 
           const luzPersonalizado = sistemaSugestao.luz; // Opção armazenada até o momento
-          let sugestao_destaque_luz = ''; 
+          let sugestao_destaque_luz = '';
+          let sugestao_destaque_luz_circulo = ''; 
 
           // Destaco se existir dentro da lista atual
           if(luz.texto_opcao == luzPersonalizado) {
             sugestao_destaque_luz = 'sugestao-destaque';
+            sugestao_destaque_luz_circulo = 'sugestao-destaque-circulo'; 
           }
 
           return (<Grid item xs={12} sm={4} md={3} className="opcao-item" key={index}>
                       <Link href="#" onClick={incluirLuz} id={"luz-opcao-" + index} data-opcao={"luz-opcao-" + index} data-luz={luz.texto_opcao} data-imagem={luz.imagem} className="link-opcao luz">
                         <div className="opcao-posicao">
                               <div className="opcao-imagem">
-                                  <img data-opcao={"luz-opcao-" + index} src={luz.imagem_opcao} alt={luz.modelo} className="opcao-luzes opcao-imagem" />
+                                 <img data-opcao={"luz-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                  className={"opcao-luz-circulo luz-opcao-" + index + "-circulo " + sugestao_destaque_luz_circulo} 
+                                  style={{width:'90%', opacity:'0'}} />
+                                  
+                                  <br />
+
+                                  <img data-opcao={"luz-opcao-" + index} src={luz.imagem_opcao} alt={luz.modelo} className="opcao-luzes opcao-imagem" 
+                                  style={{marginTop: '-210px', marginBottom: '30px'}} />
+
                               </div>
                               <div className={"opcao-texto luz-opcao-" + index + " " + sugestao_destaque_luz}>
                                 <Typography data-opcao={"luz-opcao-" + index} variant="h6" component="h6" className="subtitulo">{luz.texto_opcao}</Typography>
@@ -704,9 +788,20 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
           return el.classList.remove('sugestao-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.gravador .opcao-gravador-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('sugestao-destaque-circulo');
+      });
+
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_gravador);
       destaque.classList.toggle('sugestao-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_gravador + "-circulo");
+      destaqueCirculo.classList.toggle('sugestao-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_gravador = document.querySelector("#" + id_gravador);
@@ -799,17 +894,29 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
 
           const gravadorPersonalizado = sistemaSugestao.gravador; // Opção armazenada até o momento
           let sugestao_destaque_gravador = ''; 
+          let sugestao_destaque_gravador_circulo = '';
+
 
           // Destaco se existir dentro da lista atual
           if(gravador.texto_opcao == gravadorPersonalizado) {
             sugestao_destaque_gravador = 'sugestao-destaque';
+            sugestao_destaque_gravador_circulo = 'sugestao-destaque-circulo';
           }
 
           return (<Grid item xs={12} sm={4} md={3} className="opcao-item" key={index}>
                       <Link href="#" onClick={incluirGravador} id={"gravador-opcao-" + index} data-opcao={"gravador-opcao-" + index} data-gravador={gravador.texto_opcao} data-imagem={gravador.imagem}  className="link-opcao gravador"> 
                            <div className="opcao-posicao">
                               <div className="opcao-imagem">
-                               <img data-opcao={"gravador-opcao-" + index} src={gravador.imagem_opcao} alt={gravador.modelo} className="opcao-gravadores" />
+
+                              <img data-opcao={"gravador-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                  className={"opcao-gravador-circulo gravador-opcao-" + index + "-circulo " + sugestao_destaque_gravador_circulo} 
+                                  style={{width:'90%', opacity:'0'}} />
+                                  
+                               <br />
+
+                               <img data-opcao={"gravador-opcao-" + index} src={gravador.imagem_opcao} alt={gravador.modelo} className="opcao-gravadores" 
+                                style={{marginTop: '-210px', marginBottom: '30px'}} />
+
                            </div>
                            <div className={"opcao-texto gravador-opcao-" + index + " " + sugestao_destaque_gravador}>
                              <Typography data-opcao={"gravador-opcao-" + index} variant="h6" component="h6" className="subtitulo">{gravador.texto_opcao}</Typography>
@@ -860,9 +967,19 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
           return el.classList.remove('sugestao-destaque');
       });
 
+      // limpar destaque circulo
+      let limparCirculo = document.querySelectorAll('.armario .opcao-armario-circulo');
+      limparCirculo.forEach( (el) => {
+          return el.classList.remove('sugestao-destaque-circulo');
+      });
+
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_armario);
       destaque.classList.toggle('sugestao-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_armario + "-circulo");
+      destaqueCirculo.classList.toggle('sugestao-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_armario = document.querySelector("#" + id_armario);      
@@ -956,17 +1073,28 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
 
           const armarioPersonalizado = sistemaSugestao.armario; // Opção armazenada até o momento
           let sugestao_destaque_armario = ''; 
+          let sugestao_destaque_armario_circulo = '';
 
           // Destaco se existir dentro da lista atual
           if(armario.texto_opcao == armarioPersonalizado) {
             sugestao_destaque_armario = 'sugestao-destaque';
+            sugestao_destaque_armario_circulo = 'sugestao-destaque-circulo';
           }
 
           return (<Grid item xs={12} sm={4} md={3} className="opcao-item" key={index}>
                       <Link href="#" onClick={incluirArmario} id={"armario-opcao-" + index} data-opcao={"armario-opcao-" + index} data-armario={armario.texto_opcao} data-imagem={armario.imagem} className="link-opcao armario"> 
                         <div className="opcao-posicao">
                             <div className="opcao-imagem">
-                              <img data-opcao={"armario-opcao-" + index} src={armario.imagem_opcao} alt={armario.modelo} className="opcao-armarios" />
+
+                              <img data-opcao={"armario-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                  className={"opcao-armario-circulo armario-opcao-" + index + "-circulo " + sugestao_destaque_armario_circulo} 
+                                  style={{width:'90%', opacity:'0'}} />
+                                  
+                               <br />
+
+                              <img data-opcao={"armario-opcao-" + index} src={armario.imagem_opcao} alt={armario.modelo} className="opcao-armarios" 
+                              style={{marginTop: '-314px', marginBottom: '0'}} />
+
                             </div>
                             <div className={"opcao-texto armario-opcao-" + index + " " + sugestao_destaque_armario }>
                               <Typography data-opcao={"armario-opcao-" + index} variant="h6" component="h6" className="subtitulo">{armario.texto_opcao}</Typography>
@@ -1013,6 +1141,10 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
       // destacar opção selecionada
       let destaque = document.querySelector("." + id_acessorio);
       destaque.classList.toggle('sugestao-destaque');
+
+      // destacar opção selecionada (circulo)
+      let destaqueCirculo = document.querySelector("." + id_acessorio + "-circulo");
+      destaqueCirculo.classList.toggle('sugestao-destaque-circulo');
 
       // informações da opção selecionada
       let opcao_acessorio = document.querySelector("#" + id_acessorio);
@@ -1130,12 +1262,14 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
 
           const acessoriosPersonalizados = sistemaSugestao.acessorios.split(' + ');
           let sugestao_destaque_acessorio = ''; 
+          let sugestao_destaque_acessorio_circulo = '';
 
           acessoriosPersonalizados.find(function(itemAtual,indexAtual){
             
             // Destaco se existir dentro da lista atual
             if(acessorios.texto_opcao == itemAtual) {
               sugestao_destaque_acessorio = 'sugestao-destaque';
+              sugestao_destaque_acessorio_circulo = 'sugestao-destaque-circulo';
             }
 
           });
@@ -1144,7 +1278,16 @@ export default function Sugestao({sistemaSugestao, aoEnviarSugestao}) {
                       <Link href="#" onClick={incluirAcessorio} id={"acessorio-opcao-" + index} data-opcao={"acessorio-opcao-" + index} data-acessorios={acessorios.texto_opcao} data-imagem={acessorios.imagem} className="link-opcao acessorio"> 
                         <div className="opcao-posicao">
                            <div className="opcao-imagem">
-                             <img data-opcao={"acessorio-opcao-" + index} src={acessorios.imagem_opcao} alt={acessorios.modelo} className="opcao-acessorios" />
+
+                             <img data-opcao={"acessorio-opcao-" + index} src={Constante.BASE_URL_CONF_REACT+ '/wp-content/plugins/confiance-medical-monte-o-seu/public/images/modulos/fundo_circulo_menor.png'} alt="Círculo de destaque" 
+                                  className={"opcao-acessorio-circulo acessorio-opcao-" + index + "-circulo " + sugestao_destaque_acessorio_circulo} 
+                                  style={{width:'100%', opacity:'0'}} />
+
+                              <br />
+
+                             <img data-opcao={"acessorio-opcao-" + index} src={acessorios.imagem_opcao} alt={acessorios.modelo} className="opcao-acessorios" 
+                             style={{marginTop: '-314px', marginBottom: '0'}} />
+
                            </div>
                            <div className={"opcao-texto acessorio-opcao-" + index + " " + sugestao_destaque_acessorio}>
                              <Typography data-opcao={"acessorio-opcao-" + index} variant="h6" component="h6" className="subtitulo">{acessorios.texto_opcao}</Typography>

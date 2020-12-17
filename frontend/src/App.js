@@ -4,6 +4,7 @@ import Escolha from './components/Escolha';
 import Sugestao from './components/Sugestao';
 import Monte from './components/Monte';
 import Orcamento from './components/Orcamento';
+import Aviso from './components/Aviso';
 import './css/App.css';
 import * as Constante from './Constantes.js';
 
@@ -82,6 +83,7 @@ function App() {
         <Sugestao sistemaSugestao={dadosSugestao} aoEnviarSugestao={coletarDadosSugestao} />
         <Monte sistemaPersonalizado={dadosPersonalizado} aoEnviarPersonalizado={coletarDadosPersonalizado} />
         <Orcamento sistemaSugestao={dadosSugestao} sistemaPersonalizado={dadosPersonalizado} sistemaMarcadoEscolhido={marcadorSistema} sistemaEscolhido={sistemaMarcado} />
+        <Aviso />
       </>
     );
 }
