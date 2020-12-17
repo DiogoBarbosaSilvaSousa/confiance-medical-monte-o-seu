@@ -522,32 +522,32 @@ function adicionaAgradecimento() {
 
             <Grid item xs={12} md={6} className="imagem">
                     <div className="sistema-personalizado-imagem" style={{textAlign:'center',position:'relative',height:'568px'}}>
-                            <div style={{zIndex:1,maxWidth:'540px',position:'absolute'}}>
-                                <img src={ Constante.BASE_URL_CONF_REACT + "/wp-content/plugins/confiance-medical-monte-o-seu/public/images/sugestao/montagem/logo-fundo.jpg" } alt="Logo Fundo" style={{maxWidth:"540px"}} />
+                            <div className="posicao-1">
+                                <img src={ Constante.BASE_URL_CONF_REACT + "/wp-content/plugins/confiance-medical-monte-o-seu/public/images/sugestao/montagem/logo-fundo.jpg" } alt="Logo Fundo" className="logo-fundo" />
                             </div>
 
-                            <div style={{textAlign:'center',zIndex:2,maxWidth:'540px',position:'absolute'}}>
+                            <div className="posicao-2">
                                 <img src={ Constante.BASE_URL_CONF_REACT + "/wp-content/plugins/confiance-medical-monte-o-seu/public/images/sugestao/montagem/estante_transparente.png" } alt="Estante" style={{maxWidth:"540px"}} />
                             </div>
 
-                            <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute'}}>
-                                <img src={ sistemaMarcadoEscolhido.imagem_monitor } alt="Monitor" style={{maxWidth:"540px"}} />
+                            <div className="posicao-3">
+                                <img src={ sistemaMarcadoEscolhido.imagem_monitor } alt="Monitor" className="tamanho-maximo" />
                             </div>
 
-                            <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute',top:'232px'}}>
-                                <img src={ sistemaMarcadoEscolhido.imagem_insuflador } alt="Insuflador" style={{maxWidth:"540px"}} />
+                            <div className="posicao-4">
+                                <img src={ sistemaMarcadoEscolhido.imagem_insuflador } alt="Insuflador" className="tamanho-maximo" />
                             </div>
 
-                            <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute',top:'276px'}}>
-                                <img src={ sistemaMarcadoEscolhido.imagem_camera } alt="Camera" style={{maxWidth:"540px"}} />
+                            <div className="posicao-5">
+                                <img src={ sistemaMarcadoEscolhido.imagem_camera } alt="Camera" className="tamanho-maximo" />
                             </div>
 
-                            <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute',top:'334px'}}>
-                                <img src={ sistemaMarcadoEscolhido.imagem_luz } alt="Luz" style={{maxWidth:"540px"}} />
+                            <div className="posicao-6">
+                                <img src={ sistemaMarcadoEscolhido.imagem_luz } alt="Luz" className="tamanho-maximo" />
                             </div>
 
-                            <div style={{textAlign:'center',zIndex:3,width:'540px',maxWidth:'540px',position:'absolute',top:'400px'}}>
-                                <img src={ sistemaMarcadoEscolhido.imagem_gravador } alt="Gravador" style={{maxWidth:"540px"}} />
+                            <div className="posicao-7">
+                                <img src={ sistemaMarcadoEscolhido.imagem_gravador } alt="Gravador" className="tamanho-maximo" />
                             </div>
                     </div>
             </Grid>

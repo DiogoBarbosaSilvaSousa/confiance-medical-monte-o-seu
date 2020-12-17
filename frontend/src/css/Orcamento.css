@@ -100,6 +100,10 @@
     margin: 0 1rem 0 0;
 }
 
+.orcamento.sistema .tamanho-maximo {
+    max-width: 540px;
+}
+
 .orcamento.sistema .titulo-agradecimento {
     font-size: 1.875rem;
     font-weight: bold;
@@ -192,6 +196,72 @@
 }
 
 
+.orcamento.sistema .posicao-1 .logo-fundo {
+    z-index: 1;
+    max-width: 540px;
+    position: absolute;
+}
+
+
+
+.orcamento.sistema .posicao-1 {
+    z-index: 1;
+    max-width: 540px;
+    position: absolute;
+}
+
+.orcamento.sistema .posicao-2 {
+    text-align: center;
+    z-index: 2;
+    max-width: 540px;
+    position: absolute;
+}
+
+.orcamento.sistema .posicao-3 {
+    text-align: center;
+    z-index: 3;
+    width: 540px;
+    max-width: 540px;
+    position: absolute;
+}
+
+.orcamento.sistema .posicao-4 {
+    text-align: center;
+    z-index: 3;
+    width: 540px;
+    max-width: 540px;
+    position: absolute;
+    top: 232px;
+}
+
+.orcamento.sistema .posicao-5 {
+    text-align: center;
+    z-index: 3;
+    width: 540px;
+    max-width: 540px;
+    position: absolute;
+    top: 276px;
+}
+
+.orcamento.sistema .posicao-6 {
+    text-align: center;
+    z-index: 3;
+    width: 540px;
+    max-width: 540px;
+    position: absolute;
+    top: 334px;
+}
+
+.orcamento.sistema .posicao-7 {
+    text-align: center;
+    z-index: 3;
+    width: 540px;
+    max-width: 540px;
+    position: absolute;
+    top: 400px;
+}
+
+
 @media (min-width: 575.98px) { 
 
 
@@ -208,6 +278,78 @@
 
     #orcamento .oculta_etapa {
         display: none;
+    }
+
+
+    .orcamento.sistema .posicao-1 .logo-fundo {
+        z-index: 1;
+        max-width: 312px;
+        position: absolute;
+    }
+    
+
+
+    .orcamento.sistema .posicao-1 {
+        z-index: 1;
+        max-width: 425px;
+        position: absolute;
+    }
+    
+    .orcamento.sistema .posicao-2 {
+        text-align: center;
+        z-index: 2;
+        max-width: 425px;
+        position: absolute;
+        left: -114px;
+    }
+    
+    .orcamento.sistema .posicao-3 {
+        text-align: center;
+        z-index: 3;
+        width: 315px;
+        max-width: 540px;
+        position: absolute;
+    }
+    
+    .orcamento.sistema .posicao-4 {
+        text-align: center;
+        z-index: 3;
+        width: 315px;
+        max-width: 540px;
+        position: absolute;
+        top: 232px;
+    }
+    
+    .orcamento.sistema .posicao-5 {
+        text-align: center;
+        z-index: 3;
+        width: 315px;
+        max-width: 540px;
+        position: absolute;
+        top: 276px;
+    }
+    
+    .orcamento.sistema .posicao-6 {
+        text-align: center;
+        z-index: 3;
+        width: 315px;
+        max-width: 540px;
+        position: absolute;
+        top: 334px;
+    }
+    
+    .orcamento.sistema .posicao-7 {
+        text-align: center;
+        z-index: 3;
+        width: 315px;
+        max-width: 540px;
+        position: absolute;
+        top: 400px;
+    }
+
+
+    .orcamento.sistema .posicao-3 .tamanho-maximo {
+        max-width: 300px;
     }
 
 }
