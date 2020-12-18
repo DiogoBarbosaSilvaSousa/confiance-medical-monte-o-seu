@@ -54,7 +54,7 @@
 
 
 
-/*** ***/
+/*** Início de personalização do checkbox ***/
 
 #pre-configuracao .item-especialidade .texto{
     margin-top: 0.25rem;
@@ -113,7 +113,8 @@
 #pre-configuracao .checkbox label input[type="checkbox"]:disabled + .cr{
     opacity: .5;
 }
-/*** ***/
+
+/*** Fim de personalização do checkbox ***/
 
 @media (max-width: 575.98px) { 
 

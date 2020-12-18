@@ -303,35 +303,80 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
                 <Grid container spacing={0} className="formulario">
                     <Grid item xs={12} md={3} className="etapa-instituicao">
                        <div className="linha-lateral"> 
-                        
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="instituicao" id="privada" value="privada" onChange={handleInstituicao} />
-                            <label className="form-check-label" htmlFor="privada">Privada</label>
+
+                        <div className="form-group">
+                            <div className="radio">
+                               <label className="item-procedimento">
+
+                                   <input className="privada" type="radio" name="instituicao" id="privada" value="privada" onChange={handleInstituicao} />
+
+                                   <span className="cr"><i className="cr-icon fa fa-circle"></i></span>
+
+                                   <div className="texto">Privada</div> 
+
+                                </label>
+                            </div>
                         </div>
 
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="instituicao" id="publica" value="publica" onChange={handleInstituicao} />
-                            <label className="form-check-label" htmlFor="publica">Pública</label>
+                        <div className="form-group">
+                            <div className="radio">
+                               <label className="item-procedimento">
+                                  <input className="publica" type="radio" name="instituicao" id="publica" value="publica" onChange={handleInstituicao} />
+                                  
+                                  <span className="cr"><i className="cr-icon fa fa-circle"></i></span>
+                                  
+                                  <div className="texto">Pública</div> 
+
+                                </label>
+                            </div>
                         </div>
 
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="instituicao" id="filantropica" value="filantropica" onChange={handleInstituicao} />
-                            <label className="form-check-label" htmlFor="filantropica">Filantrópica</label>
+                        <div className="form-group">
+                            <div className="radio">
+                               <label className="item-procedimento">
+                                    <input className="filantropica" type="radio" name="instituicao" id="filantropica" value="filantropica" onChange={handleInstituicao} />
+
+                                    <span className="cr"><i className="cr-icon fa fa-circle"></i></span>
+
+                                    <div className="texto">Filantrópica</div> 
+                                </label>
+                            </div>
                         </div>
 
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="instituicao" id="oss" value="oss" onChange={handleInstituicao} />
-                            <label className="form-check-label" htmlFor="oss">OSS</label>
+                        <div className="form-group">
+                            <div className="radio">
+                               <label className="item-procedimento">
+                                    <input className="oss" type="radio" name="instituicao" id="oss" value="oss" onChange={handleInstituicao} />
+
+                                    <span className="cr"><i className="cr-icon fa fa-circle"></i></span>
+
+                                    <div className="texto">OSS</div>
+                               </label>
+                            </div>
                         </div>
 
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="instituicao" id="cirurgiao" value="cirurgiao" onChange={handleInstituicao} />
-                            <label className="form-check-label" htmlFor="cirurgiao">Cirurgião</label>
+                        <div className="form-group">
+                            <div className="radio">
+                               <label className="item-procedimento">
+                                    <input className="cirurgiao" type="radio" name="instituicao" id="cirurgiao" value="cirurgiao" onChange={handleInstituicao} />
+
+                                    <span className="cr"><i className="cr-icon fa fa-circle"></i></span>
+
+                                    <div className="texto">Cirurgião</div>
+                                </label>
+                            </div>
                         </div>
 
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="instituicao" id="outras" value="outras" onChange={handleInstituicao} />
-                            <label className="form-check-label" htmlFor="outras">Outras</label>
+                        <div className="form-group">
+                            <div className="radio">
+                               <label className="item-procedimento">
+                                    <input className="outras" type="radio" name="instituicao" id="outras" value="outras" onChange={handleInstituicao} />
+
+                                    <span className="cr"><i className="cr-icon fa fa-circle"></i></span>
+                                    
+                                    <div className="texto">Outras</div>
+                                </label>
+                            </div>
                         </div>
 
                         <div className="form-group pr-3">
@@ -386,30 +431,43 @@ export default function Orcamento({sistemaPersonalizado, sistemaSugestao, sistem
                                 <br />
 
                                 <div className="form-group">
-                                    <div className="form-check">
-                                        <input className="form-check-input compra" 
-                                               type="checkbox" 
-                                               id="compra" 
-                                               name="compra" 
-                                               value="compra" 
-                                               onChange={handleInteresse} 
-                                               checked={interesse.compra}                                                
-                                               disabled />
-                                        <label className="form-check-label" htmlFor="compra"> Compra </label>
+                                    <div className="checkbox">
+
+                                        <label className="item-procedimento">
+                                            <input className="compra" 
+                                                type="checkbox" 
+                                                id="compra" 
+                                                name="compra" 
+                                                value="compra" 
+                                                onChange={handleInteresse}
+                                                checked={interesse.compra}
+                                                disabled />
+                                            
+                                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                                            <div className="texto">Compra</div> 
+                                        </label>
                                     </div>
                                 </div>
 
                                 <div className="form-group">
-                                    <div className="form-check locacao">
-                                        <input className="form-check-input locacao" 
-                                               type="checkbox" 
-                                               id="locacao" 
-                                               name="locacao" 
-                                               value="locacao" 
-                                               onChange={handleInteresse} 
-                                               checked={interesse.locacao}                                                
-                                               disabled />
-                                        <label className="form-check-label" htmlFor="locacao"> Locação </label>
+                                    <div className="checkbox">
+
+                                       <label className="item-procedimento"> 
+                                            <input className="locacao" 
+                                                type="checkbox" 
+                                                id="locacao" 
+                                                name="locacao" 
+                                                value="locacao" 
+                                                onChange={handleInteresse} 
+                                                checked={interesse.locacao}                                                
+                                                disabled />
+
+                                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                                            <div className="texto">Locação</div> 
+
+                                        </label>
                                     </div>
                                 </div>
 
