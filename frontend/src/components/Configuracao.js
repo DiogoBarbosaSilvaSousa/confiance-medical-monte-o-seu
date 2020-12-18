@@ -256,96 +256,135 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
               <Typography variant="body1" gutterBottom className="subtexto">que utilizarão o equipamento</Typography>
 
               <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input compra" 
+                    <div className="checkbox">
+
+                       <label className="item-especialidade">
+
+                        <input className="compra" 
                                 type="checkbox" 
                                 id="geral" 
                                 name="geral" 
                                 value="geral" 
                                 onChange={handleEspecialidade}
                                 checked={especialidade.geral} />
-                        <label className="form-check-label item-especialidade" htmlFor="geral"> Cirurgia Geral </label>
+
+                         <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                         <div className="texto">Cirurgia Geral</div>
+                        
+                        </label>
                     </div>
               </div>
 
 
               <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input ginecologia" 
-                                type="checkbox" 
-                                id="ginecologia" 
-                                name="ginecologia" 
-                                value="ginecologia" 
-                                onChange={handleEspecialidade}
-                                checked={especialidade.ginecologia} />
-                        <label className="form-check-label item-especialidade" htmlFor="ginecologia"> Ginecologia </label>
+                     <div className="checkbox">
+                         <label className="item-especialidade">
+                          <input className="ginecologia" 
+                                  type="checkbox" 
+                                  id="ginecologia" 
+                                  name="ginecologia" 
+                                  value="ginecologia" 
+                                  onChange={handleEspecialidade}
+                                  checked={especialidade.ginecologia} />
+                          
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                          <div className="texto">Ginecologia</div> 
+                         </label>
                     </div>
               </div>
 
 
               <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input urologia" 
-                                type="checkbox" 
-                                id="urologia" 
-                                name="urologia" 
-                                value="urologia" 
-                                onChange={handleEspecialidade}
-                                checked={especialidade.urologia} />
-                        <label className="form-check-label item-especialidade" htmlFor="urologia"> Urologia </label>
+                    <div className="checkbox">
+                       <label className="item-especialidade">
+                          <input className="urologia" 
+                                  type="checkbox" 
+                                  id="urologia" 
+                                  name="urologia" 
+                                  value="urologia" 
+                                  onChange={handleEspecialidade}
+                                  checked={especialidade.urologia} />
+
+                           <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                           <div className="texto">Urologia</div>
+                        </label>
                     </div>
               </div>
 
               <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input proctologia" 
-                                type="checkbox" 
-                                id="proctologia" 
-                                name="proctologia" 
-                                value="proctologia" 
-                                onChange={handleEspecialidade}
-                                checked={especialidade.proctologia} />
-                        <label className="form-check-label item-especialidade" htmlFor="proctologia"> Proctologia </label>
+                    <div className="checkbox">
+                        <label className="item-especialidade">
+                            <input className="proctologia" 
+                                    type="checkbox" 
+                                    id="proctologia" 
+                                    name="proctologia" 
+                                    value="proctologia" 
+                                    onChange={handleEspecialidade}
+                                    checked={especialidade.proctologia} />
+
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                          <div className="texto">Proctologia</div> 
+                        </label>
                     </div>
               </div>
 
               <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input ortopedia" 
-                                type="checkbox" 
-                                id="ortopedia" 
-                                name="ortopedia" 
-                                value="ortopedia" 
-                                onChange={handleEspecialidade}
-                                checked={especialidade.ortopedia} />
-                        <label className="form-check-label item-especialidade" htmlFor="ortopedia"> Ortopedia </label>
+                    <div className="checkbox">
+                       <label className="item-especialidade">
+                          <input className="ortopedia" 
+                                  type="checkbox" 
+                                  id="ortopedia" 
+                                  name="ortopedia" 
+                                  value="ortopedia" 
+                                  onChange={handleEspecialidade}
+                                  checked={especialidade.ortopedia} />
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                          <div className="texto">Ortopedia</div>
+                        </label>
                     </div>
               </div>
 
 
               <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input otorrinolaringologia" 
-                                type="checkbox" 
-                                id="otorrinolaringologia" 
-                                name="otorrinolaringologia" 
-                                value="otorrinolaringologia" 
-                                onChange={handleEspecialidade}
-                                checked={especialidade.otorrinolaringologia} />
-                        <label className="form-check-label item-especialidade" htmlFor="otorrinolaringologia"> Otorrinolaringologia </label>
+                    <div className="checkbox">
+                       <label className="item-especialidade">
+                          <input className="otorrinolaringologia" 
+                                  type="checkbox" 
+                                  id="otorrinolaringologia" 
+                                  name="otorrinolaringologia" 
+                                  value="otorrinolaringologia" 
+                                  onChange={handleEspecialidade}
+                                  checked={especialidade.otorrinolaringologia} />
+
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                          <div className="texto">Otorrinolaringologia</div>
+                        </label>
                     </div>
               </div>
 
               <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input oncologia" 
+                    <div className="checkbox">
+
+                       <label className="item-especialidade">
+                         <input className="oncologia" 
                                 type="checkbox" 
                                 id="oncologia" 
                                 name="oncologia" 
                                 value="oncologia" 
                                 onChange={handleEspecialidade}
                                 checked={especialidade.oncologia} />
-                        <label className="form-check-label item-especialidade" htmlFor="oncologia"> Oncologia </label>
+
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                          <div className="texto">Oncologia</div>
+
+                       </label>
+
                     </div>
               </div>
 
@@ -360,106 +399,148 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
             <>
 
                  <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input diagnostica" 
-                                type="checkbox" 
-                                id="diagnostica" 
-                                name="diagnostica" 
-                                value="diagnostica" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.diagnostica} />
-                        <label className="form-check-label item-procedimento" htmlFor="diagnostica"> Diagnóstica </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento">
+
+                          <input className="diagnostica" 
+                                  type="checkbox" 
+                                  id="diagnostica" 
+                                  name="diagnostica" 
+                                  value="diagnostica" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.diagnostica} />
+                          
+                           <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                           <div className="texto">Diagnóstica</div>
+
+                         </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input apendicectomia" 
-                                type="checkbox" 
-                                id="apendicectomia" 
-                                name="apendicectomia" 
-                                value="apendicectomia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.apendicectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="apendicectomia"> Apendicectomia </label>
+                    <div className="checkbox">
+                      <label className="item-procedimento">
+                          <input className="apendicectomia" 
+                                  type="checkbox" 
+                                  id="apendicectomia" 
+                                  name="apendicectomia" 
+                                  value="apendicectomia" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.apendicectomia} />
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                          <div className="texto">Apendicectomia</div>
+                      </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input colecistectomia" 
-                                type="checkbox" 
-                                id="colecistectomia" 
-                                name="colecistectomia" 
-                                value="colecistectomia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.colecistectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="colecistectomia"> Colecistectomia </label>
+                    <div className="checkbox">
+                      <label className="item-procedimento">
+                          <input className="colecistectomia" 
+                                  type="checkbox" 
+                                  id="colecistectomia" 
+                                  name="colecistectomia" 
+                                  value="colecistectomia" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.colecistectomia} />
+
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                          <div className="texto">Colecistectomia</div>
+                      </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input herniaUmbilical" 
-                                type="checkbox" 
-                                id="herniaUmbilical" 
-                                name="herniaUmbilical" 
-                                value="herniaUmbilical" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.herniaUmbilical} />
-                        <label className="form-check-label item-procedimento" htmlFor="herniaUmbilical"> Hérnia Umbilical/Inguinal </label>
+                    <div className="checkbox">
+                       
+                       <label className="item-procedimento">
+                            <input className="herniaUmbilical" 
+                                    type="checkbox" 
+                                    id="herniaUmbilical" 
+                                    name="herniaUmbilical" 
+                                    value="herniaUmbilical" 
+                                    onChange={handleProcedimento}
+                                    checked={procedimento.herniaUmbilical} />
+                            
+                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                            <div className="texto">Hérnia Umbilical/Inguinal</div>
+                         </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input herniaHiato" 
-                                type="checkbox" 
-                                id="herniaHiato" 
-                                name="herniaHiato" 
-                                value="herniaHiato" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.herniaHiato} />
-                        <label className="form-check-label item-procedimento" htmlFor="herniaHiato"> Hérnia Hiato </label>
+                    <div className="checkbox">
+                        <label className="item-procedimento">
+
+                          <input className="herniaHiato" 
+                                  type="checkbox" 
+                                  id="herniaHiato" 
+                                  name="herniaHiato" 
+                                  value="herniaHiato" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.herniaHiato} />
+
+                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                            
+                            <div className="texto">Hérnia Hiato</div>
+                         
+                         </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input gastroplastia" 
-                                type="checkbox" 
-                                id="gastroplastia" 
-                                name="gastroplastia" 
-                                value="gastroplastia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.gastroplastia} />
-                        <label className="form-check-label item-procedimento" htmlFor="gastroplastia"> Gastroplastia </label>
+                    <div className="checkbox">
+                      <label className="item-procedimento">
+                          <input className="gastroplastia" 
+                                  type="checkbox" 
+                                  id="gastroplastia" 
+                                  name="gastroplastia" 
+                                  value="gastroplastia" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.gastroplastia} />
+                          
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                          
+                          <div className="texto">Gastroplastia</div>  
+                      </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input pancreatectomia" 
-                                type="checkbox" 
-                                id="pancreatectomia" 
-                                name="pancreatectomia" 
-                                value="pancreatectomia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.pancreatectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="pancreatectomia"> Pancreatectomia </label>
+                    <div className="checkbox">
+                        <label className="item-procedimento">
+                          <input className="form-check-input pancreatectomia" 
+                                  type="checkbox" 
+                                  id="pancreatectomia" 
+                                  name="pancreatectomia" 
+                                  value="pancreatectomia" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.pancreatectomia} />
+                          
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                          <div className="texto">Pancreatectomia </div>
+                         </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input hepatectomia" 
-                                type="checkbox" 
-                                id="hepatectomia" 
-                                name="hepatectomia" 
-                                value="hepatectomia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.hepatectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="hepatectomia"> Hepatectomia </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento" htmlFor="hepatectomia">
+                          <input className="form-check-input hepatectomia" 
+                                  type="checkbox" 
+                                  id="hepatectomia" 
+                                  name="hepatectomia" 
+                                  value="hepatectomia" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.hepatectomia} />
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                          <div className="texto">Hepatectomia </div>
+                       </label>
                     </div>
                   </div>
              
@@ -470,54 +551,73 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
             <>
 
                 <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input histeroscopiaDiag" 
-                                type="checkbox" 
-                                id="histeroscopiaDiag" 
-                                name="histeroscopiaDiag" 
-                                value="histeroscopiaDiag" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.histeroscopiaDiag} />
-                        <label className="form-check-label item-procedimento" htmlFor="histeroscopiaDiag"> Histeroscopia Diagnóstica </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento">
+                            <input className="histeroscopiaDiag" 
+                                    type="checkbox" 
+                                    id="histeroscopiaDiag" 
+                                    name="histeroscopiaDiag" 
+                                    value="histeroscopiaDiag" 
+                                    onChange={handleProcedimento}
+                                    checked={procedimento.histeroscopiaDiag} />
+
+                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                            <div className="texto">Histeroscopia Diagnóstica</div>
+                        </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input histeroscopiaCiru" 
-                                type="checkbox" 
-                                id="histeroscopiaCiru" 
-                                name="histeroscopiaCiru" 
-                                value="histeroscopiaCiru" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.histeroscopiaCiru} />
-                        <label className="form-check-label item-procedimento" htmlFor="histeroscopiaCiru"> Histeroscopia Cirúrgica </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento" htmlFor="histeroscopiaCiru">
+                             <input className="histeroscopiaCiru" 
+                                  type="checkbox" 
+                                  id="histeroscopiaCiru" 
+                                  name="histeroscopiaCiru" 
+                                  value="histeroscopiaCiru" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.histeroscopiaCiru} />
+
+                             <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                            
+                             <div className="texto">Histeroscopia Cirúrgica</div>
+                        </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input miomaUterino" 
-                                type="checkbox" 
-                                id="miomaUterino" 
-                                name="miomaUterino" 
-                                value="miomaUterino" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.miomaUterino} />
-                        <label className="form-check-label item-procedimento" htmlFor="miomaUterino"> Mioma Uterino </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento">
+                          <input className="miomaUterino" 
+                                  type="checkbox" 
+                                  id="miomaUterino" 
+                                  name="miomaUterino" 
+                                  value="miomaUterino" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.miomaUterino} />
+
+                           <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                           
+                           <div className="texto">Mioma Uterino </div>
+
+                         </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input endometriose" 
-                                type="checkbox" 
-                                id="endometriose" 
-                                name="endometriose" 
-                                value="endometriose" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.endometriose} />
-                        <label className="form-check-label item-procedimento" htmlFor="endometriose"> Endometriose </label>
+                    <div className="checkbox">
+                         <label className="item-procedimento"> 
+                          <input className="endometriose" 
+                                  type="checkbox" 
+                                  id="endometriose" 
+                                  name="endometriose" 
+                                  value="endometriose" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.endometriose} />
+
+                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                            <div className="texto">Endometriose</div>
+                         </label>
                     </div>
                   </div>
 
@@ -528,68 +628,96 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
               <>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input rtu" 
+                    <div className="checkbox">
+                        <label className="item-procedimento">
+                           <input className="rtu" 
                                 type="checkbox" 
                                 id="rtu" 
                                 name="rtu" 
                                 value="rtu" 
                                 onChange={handleProcedimento}
                                 checked={procedimento.rtu} />
-                        <label className="form-check-label item-procedimento" htmlFor="rtu"> RTU </label>
+
+                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                            <div className="texto">RTU</div>
+                         </label>
                     </div>
                   </div>
 
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input pieloplastia" 
+                    <div className="checkbox">
+
+                      <label className="item-procedimento">
+
+                        <input className="pieloplastia" 
                                 type="checkbox" 
                                 id="pieloplastia" 
                                 name="pieloplastia" 
                                 value="pieloplastia" 
                                 onChange={handleProcedimento}
                                 checked={procedimento.pieloplastia} />
-                        <label className="form-check-label item-procedimento" htmlFor="pieloplastia"> Pieloplastia </label>
+
+                         <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                         <div className="texto">Pieloplastia</div>
+
+                      </label>
+
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input nefrectomia" 
-                                type="checkbox" 
-                                id="nefrectomia" 
-                                name="nefrectomia" 
-                                value="nefrectomia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.nefrectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="nefrectomia"> Nefrectomia </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento">
+                          <input className="nefrectomia" 
+                                  type="checkbox" 
+                                  id="nefrectomia" 
+                                  name="nefrectomia" 
+                                  value="nefrectomia" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.nefrectomia} />
+
+                           <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                          
+                           <div className="texto">Nefrectomia</div>
+                        </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input adrenalectomia" 
+                    <div className="checkbox">
+                       <label className="item-procedimento"> 
+                        <input className="adrenalectomia" 
                                 type="checkbox" 
                                 id="adrenalectomia" 
                                 name="adrenalectomia" 
                                 value="adrenalectomia" 
                                 onChange={handleProcedimento}
                                 checked={procedimento.adrenalectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="adrenalectomia"> Adrenalectomia </label>
+
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                          
+                          <div className="texto">Adrenalectomia</div>
+                        </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input prostatectomia" 
-                                type="checkbox" 
-                                id="prostatectomia" 
-                                name="prostatectomia" 
-                                value="prostatectomia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.prostatectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="prostatectomia"> Prostatectomia </label>
+                    <div className="checkbox">
+                        <label className="item-procedimento">
+                            <input className="prostatectomia" 
+                                    type="checkbox" 
+                                    id="prostatectomia" 
+                                    name="prostatectomia" 
+                                    value="prostatectomia" 
+                                    onChange={handleProcedimento}
+                                    checked={procedimento.prostatectomia} />
+                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                           
+                            <div className="texto">Prostatectomia</div>
+                        </label>
                     </div>
                   </div>
 
@@ -601,29 +729,38 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
               <>
 
                  <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input retossigmoidoscopia" 
-                                type="checkbox" 
-                                id="retossigmoidoscopia" 
-                                name="retossigmoidoscopia" 
-                                value="retossigmoidoscopia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.retossigmoidoscopia} />
-                        <label className="form-check-label item-procedimento" htmlFor="retossigmoidoscopia"> Retossigmoidoscopia </label>
+                    <div className="checkbox">
+                          <label className="item-procedimento">
+                              <input className="retossigmoidoscopia" 
+                                      type="checkbox" 
+                                      id="retossigmoidoscopia" 
+                                      name="retossigmoidoscopia" 
+                                      value="retossigmoidoscopia" 
+                                      onChange={handleProcedimento}
+                                      checked={procedimento.retossigmoidoscopia} />
+
+                              <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                              
+                              <div className="texto">Retossigmoidoscopia </div>
+                          </label>
                     </div>
                   </div>
 
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input colectomia" 
-                                type="checkbox" 
-                                id="colectomia" 
-                                name="colectomia" 
-                                value="colectomia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.colectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="colectomia"> Colectomia </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento" htmlFor="colectomia">
+                            <input className="colectomia" 
+                                    type="checkbox" 
+                                    id="colectomia" 
+                                    name="colectomia" 
+                                    value="colectomia" 
+                                    onChange={handleProcedimento}
+                                    checked={procedimento.colectomia} />
+                             <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                             
+                             <div className="texto">Colectomia</div>
+                         </label>
                     </div>
                   </div>
 
@@ -635,15 +772,20 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
                 <>
 
                  <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input artroscopia" 
-                                type="checkbox" 
-                                id="artroscopia" 
-                                name="artroscopia" 
-                                value="artroscopia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.artroscopia} />
-                        <label className="form-check-label item-procedimento" htmlFor="artroscopia"> Artroscopia </label>
+                    <div className="checkbox">
+                        <label className="item-procedimento">
+                            <input className="artroscopia" 
+                                    type="checkbox" 
+                                    id="artroscopia" 
+                                    name="artroscopia" 
+                                    value="artroscopia" 
+                                    onChange={handleProcedimento}
+                                    checked={procedimento.artroscopia} />
+
+                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                            <div className="texto">Artroscopia</div>
+                        </label>
                     </div>
                   </div>
 
@@ -654,55 +796,71 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
                 <>
 
                  <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input otorrinoDiagnostica" 
-                                type="checkbox" 
-                                id="otorrinoDiagnostica" 
-                                name="otorrinoDiagnostica" 
-                                value="otorrinoDiagnostica" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.otorrinoDiagnostica} />
-                        <label className="form-check-label item-procedimento" htmlFor="otorrinoDiagnostica"> Otorrino. Diagnóstica </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento">
+                          <input className="otorrinoDiagnostica" 
+                                  type="checkbox" 
+                                  id="otorrinoDiagnostica" 
+                                  name="otorrinoDiagnostica" 
+                                  value="otorrinoDiagnostica" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.otorrinoDiagnostica} />
+
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                          <div className="texto">Otorrino. Diagnóstica</div>
+                       </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input adenoidectomia" 
-                                type="checkbox" 
-                                id="adenoidectomia" 
-                                name="adenoidectomia" 
-                                value="adenoidectomia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.adenoidectomia} />
-                        <label className="form-check-label item-procedimento" htmlFor="adenoidectomia"> Adenoidectomia </label>
+                    <div className="checkbox">
+                        <label className="item-procedimento">
+                            <input className="adenoidectomia" 
+                                    type="checkbox" 
+                                    id="adenoidectomia" 
+                                    name="adenoidectomia" 
+                                    value="adenoidectomia" 
+                                    onChange={handleProcedimento}
+                                    checked={procedimento.adenoidectomia} />
+                             <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                             <div className="texto">Adenoidectomia</div>
+                         </label>
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input septoplastia" 
-                                type="checkbox" 
-                                id="septoplastia" 
-                                name="septoplastia" 
-                                value="septoplastia" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.septoplastia} />
-                        <label className="form-check-label item-procedimento" htmlFor="septoplastia"> Septoplastia </label>
+                    <div className="checkbox">
+                        <label className="item-procedimento">
+                            <input className="septoplastia" 
+                                    type="checkbox" 
+                                    id="septoplastia" 
+                                    name="septoplastia" 
+                                    value="septoplastia" 
+                                    onChange={handleProcedimento}
+                                    checked={procedimento.septoplastia} />
+
+                            <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+
+                            <div className="texto">Septoplastia</div> 
+                        </label>
                     </div>
                   </div>
 
 
                   <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input hipofise" 
-                                type="checkbox" 
-                                id="hipofise" 
-                                name="hipofise" 
-                                value="hipofise" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.hipofise} />
-                        <label className="form-check-label item-procedimento" htmlFor="hipofise"> Hipófise </label>
+                    <div className="checkbox">
+                       <label className="item-procedimento">
+                          <input className="hipofise" 
+                                  type="checkbox" 
+                                  id="hipofise" 
+                                  name="hipofise" 
+                                  value="hipofise" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.hipofise} />
+                           <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                           <div className="texto">Hipófise</div>
+                         </label>
                     </div>
                   </div>
 
@@ -713,15 +871,20 @@ export default function Configuracao({aoEnviarSugestao, aoEnviarPersonalizado}) 
                <>
 
                  <div className="form-group">
-                    <div className="form-check">
-                        <input className="form-check-input oncologiaTodas" 
-                                type="checkbox" 
-                                id="oncologiaTodas" 
-                                name="oncologiaTodas" 
-                                value="oncologiaTodas" 
-                                onChange={handleProcedimento}
-                                checked={procedimento.oncologiaTodas } />
-                        <label className="form-check-label item-procedimento" htmlFor="oncologiaTodas"> Todas </label>
+                    <div className="checkbox">
+                        <label className="item-procedimento">
+                          <input className="oncologiaTodas" 
+                                  type="checkbox" 
+                                  id="oncologiaTodas" 
+                                  name="oncologiaTodas" 
+                                  value="oncologiaTodas" 
+                                  onChange={handleProcedimento}
+                                  checked={procedimento.oncologiaTodas } />
+
+                          <span className="cr"><i className="cr-icon fa fa-check"></i></span>
+                          
+                          <div className="texto">Todas</div>
+                        </label>
                     </div>
                   </div>
 

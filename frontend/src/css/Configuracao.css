@@ -52,6 +52,69 @@
     height: 30px;
 }*/
 
+
+
+/*** ***/
+
+#pre-configuracao .item-especialidade .texto{
+    margin-top: 0.25rem;
+    color: #1c2c4e;
+    font-family: "Lato", sans-serif;
+    width: 175px;
+}
+
+#pre-configuracao .item-procedimento .texto{
+    margin-top: 0.25rem;
+    color: #1c2c4e;
+    font-family: "Lato", sans-serif;
+    width: 208px;
+}
+
+#pre-configuracao .checkbox label:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#pre-configuracao .checkbox .cr {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #1c2c4e;
+    /*! border-radius: .25em; */
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+#pre-configuracao .checkbox .cr .cr-icon{
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 18%;
+}
+
+#pre-configuracao .checkbox label input[type="checkbox"]{
+    display: none;
+}
+
+#pre-configuracao .checkbox label input[type="checkbox"] + .cr > .cr-icon{
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+#pre-configuracao .checkbox label input[type="checkbox"]:checked + .cr > .cr-icon{
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+#pre-configuracao .checkbox label input[type="checkbox"]:disabled + .cr{
+    opacity: .5;
+}
+/*** ***/
+
 @media (max-width: 575.98px) { 
 
     #pre-configuracao {
@@ -73,6 +136,11 @@
         font-size: 0.85rem;
     }
 
+    #pre-configuracao .item-procedimento .texto {
+        width: 200px;
+    }
+
+
 } /* @media (max-width: 575.98px) */
 
 @media (max-width: 375.98px) { 
@@ -93,6 +161,10 @@
         margin: 1rem 0 1rem 0;
         padding: 0.3rem 0 0.3rem 0;
         font-size: 1.25rem;
+    }
+
+    #pre-configuracao .item-procedimento .texto {
+        width: 180px;
     }
 
 } /* @media (max-width: 375.98px) */

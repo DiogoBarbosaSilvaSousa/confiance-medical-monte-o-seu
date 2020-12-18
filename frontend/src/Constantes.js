@@ -1,4 +1,4 @@
-let ambiente = 'hmg'; // Defina ambiente em que está trabalhando
+let ambiente = 'dev'; // Defina ambiente em que está trabalhando
 
 let url_conf_react = ''; // Variável que muda de acordo com o ambiente
 
